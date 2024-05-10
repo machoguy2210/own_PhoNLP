@@ -7,13 +7,18 @@ class NER(nn.Module):
         self.fc1 = nn.Linear(input_size + inputW_size, hidden_size)
         self.fc2 = nn.Linear(hidden_size, ouput_size)
         self.W = nn.Parameter(torch.rand(inputW_size, outputW_size))
+        self.softmax = nn.Softmax(dim=1)
 
     def forward(self, e,p):
-        t = torch.matmul(self.W, p)
+        t = []
+        for vector in p:
+            _t = torch.matmul(self.W, vector)
+            t.append(_t)
+        t = torch.stack(t)
         v = torch.cat((e, t),dim= 1)
         h = torch.relu(self.fc1(v))
         h = self.fc2(h)
-        return h
+        return self.softmax(h)
 
 if __name__ == '__main__':
     input_size = 300

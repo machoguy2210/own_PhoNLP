@@ -4,7 +4,7 @@ import torch
 
 def split_data(data):
     return data.split()
-
+ 
 with open('sample_data/ner_train.txt', 'r', encoding='utf-8') as f:
     data = f.read().split('\n')
     nerdata = list(map(split_data, data))
@@ -94,10 +94,16 @@ sentences = []
 
 tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base-v2")
 
+#Đảm bảo tokenize xong câu vẫn giữ nguyên độ dài
 for i in ner_sentences:
-    sentences.append(torch.tensor(tokenizer.encode(i)))
+    en_input = tokenizer.encode(i)
+    if len(en_input) != len(i.split()) + 2:
+        en_input = [0]
+        for j in i.split():
+            en_input.append(tokenizer.encode(j)[1])
+        en_input.append(2)
+    sentences.append(en_input)
 
 with open('sample_data/input_encode.pkl', 'wb') as f:
     pickle.dump(sentences, f)
-
 

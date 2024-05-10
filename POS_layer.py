@@ -1,9 +1,8 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-import transformers
-# Dữ liệu ví dụ (vector nhúng từ và nhãn POS tương ứng)
-# Đây chỉ là ví dụ, bạn cần thay thế bằng dữ liệu thực tế của bạn
+from transformers import AutoModel
+import pickle
 
 
 # Mô hình FNN
@@ -12,43 +11,47 @@ class POS(nn.Module):
         super(POS, self).__init__()
         self.fc1 = nn.Linear(input_size, hidden_size)
         self.fc2 = nn.Linear(hidden_size, output_size)
-        self.softmax = nn.Softmax(dim=0)
+        self.softmax = nn.Softmax(dim=1)
 
     def forward(self, x):
         x = torch.relu(self.fc1(x))
         x = self.fc2(x)
         return self.softmax(x)
 
-# Khởi tạo mô hình
-input_size = 300  # Kích thước vector nhúng từ
-hidden_size = 100  # Số nút trong tầng ẩn
-output_size = 5  # Số lớp POS
-model = POS(input_size, hidden_size, output_size)
 
-# Hàm mất mát và tối ưu hóa
+if __name__ == '__main__':
+    with open('sample_data/input_encode.pkl', 'rb') as f:
+        encode_inputs = pickle.load(f)
+    
+    with open('sample_data/pos_labels.pkl', 'rb') as f:
+        labels = pickle.load(f)
+    with open('sample_data/pos_dict_w2i.pkl', 'rb') as f:
+        pos_dict_w2i = pickle.load(f)
+    # Khởi tạo mô hình
+    input_size = 768  # Kích thước vector nhúng từ
+    hidden_size = 100  # Số nút trong tầng ẩn
+    output_size = len(pos_dict_w2i)  # Số lớp POS
+    model = POS(input_size, hidden_size, output_size)
 
-optimizer = optim.SGD(model.parameters(), lr=0.01)
+    # Hàm mất mát và tối ưu hóa
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.AdamW(model.parameters(), lr=0.001)
 
-inputs = torch.randn(300)
+    # Dữ liệu đầu vào
+    
 
+    phoBERT = AutoModel.from_pretrained("vinai/phobert-base-v2")
 
-output = torch.tensor([0.2813, 0.1676, 0.1858, 0.1886, 0.1767])
-target = torch.tensor(1)
-criterion = nn.CrossEntropyLoss()
-loss = criterion(output, target)
-print(loss)
+    # Huấn luyện mô hình
+    for epoch in range(1):
+        for i in range(len(encode_inputs)):
+            optimizer.zero_grad()
+            inputs = phoBERT(torch.tensor([encode_inputs[i]])).last_hidden_state 
+            outputs = model(inputs[0,1:-1])
+            target = torch.tensor(list(map(lambda x: pos_dict_w2i[x],labels[i])))
+            loss = criterion(outputs, target)
+            loss.backward()
+            optimizer.step()
+            print("Done")
 
-'''# Huấn luyện mô hình
-for epoch in range(100):
-    optimizer.zero_grad()
-    outputs = model(inputs)
-    loss = criterion(outputs, target)
-    loss.backward()
-    optimizer.step()'''
-
-# Dự đoán1
-'''with torch.no_grad():
-    test_word = torch.randn(1, 300)  # Từ mới cần dự đoán
-    predicted_probs = model(test_word)
-    _, predicted_label = torch.max(predicted_probs, 1)
-    print(f"Dự đoán POS: Lớp {predicted_label.item()}")'''
+    
