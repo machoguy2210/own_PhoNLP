@@ -53,6 +53,36 @@ if __name__ == '__main__':
             loss = criterion(outputs_pos, pos_labels) + criterion(output_ner, ner_labels)
             loss.backward()
             optimizer.step()
-            print("Done")
+            
     
+        print('Epoch: {}, Loss: {}'.format(epoch, loss.item()))
+    
+    with open('sample_data/input_encode_test.pkl', 'rb') as f:
+        encode_inputs_test = pickle.load(f)
+    
+    with open('sample_data/encode_label_test.pkl', 'rb') as f:
+        labels_test = pickle.load(f)
+    
+    with open('sample_data/pos_dict_i2w.pkl', 'rb') as f:
+        pos_dict_i2w = pickle.load(f)
+    with open('sample_data/ner_dict_i2w.pkl', 'rb') as f:
+        ner_dict_i2w = pickle.load(f)
+    
+
+    # Đánh giá mô hình
+    correct = 0
+    total = 0
+    with torch.no_grad():
+        for i in range(len(encode_inputs_test)):
+            inputs = phoBERT(torch.tensor([encode_inputs_test[i]])).last_hidden_state 
+            outputs_pos, output_ner = model(inputs[0,1:-1])
+            ner_labels, pos_labels = split_label(labels_test[i])
+            _, predicted_pos = torch.max(outputs_pos, 1)
+            _, predicted_ner = torch.max(output_ner, 1)
+            total += pos_labels.size(0) * 2
+            correct += (predicted_pos == pos_labels).sum().item() + (predicted_ner == ner_labels).sum().item()
+
+    print('Accuracy: {}'.format(correct / total))
+
+
 

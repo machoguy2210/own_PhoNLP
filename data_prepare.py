@@ -5,13 +5,14 @@ import torch
 def split_data(data):
     return data.split()
  
-with open('sample_data/ner_train.txt', 'r', encoding='utf-8') as f:
+with open('sample_data/ner_test.txt', 'r', encoding='utf-8') as f:
     data = f.read().split('\n')
     nerdata = list(map(split_data, data))
 
-with open('sample_data/pos_train.txt', 'r', encoding='utf-8') as f:
+with open('sample_data/pos_test.txt', 'r', encoding='utf-8') as f:
     data = f.read().split('\n')
     posdata = list(map(split_data, data))
+
 k = ""
 q = []
 ner_sentences = []
@@ -46,10 +47,18 @@ for i in posdata:
 
 labels = []
 
+pos_set = {'T', 'CH', 'Cc', 'R', 'Y', 'Nc', 'Nu', 'M', 'I', 'E', 'Np', 'N', 'A', 'C', 'Ny', 'X', 'Nb', 'P', 'L', 'Vb', 'V'}
+
 for i in range(len(ner_labels)):
     labels.append(list(zip(ner_labels[i], pos_labels[i])))
+     
+with open('sample_data/ner_dict_w2i.pkl', 'rb') as f:
+    ner_dict_w2i = pickle.load(f)
 
-ner_dict_w2i = {}
+with open('sample_data/pos_dict_w2i.pkl', 'rb') as f:
+    pos_dict_w2i = pickle.load(f)
+
+'''ner_dict_w2i = {}
 ner_dict_i2w = {}
 
 for i,j in enumerate(ner_set):
@@ -61,7 +70,7 @@ pos_dict_i2w = {}
 
 for i,j in enumerate(pos_set):
     pos_dict_w2i[j] = i
-    pos_dict_i2w[i] = j
+    pos_dict_i2w[i] = j'''
 
 encode_label = []
 
@@ -69,7 +78,7 @@ for i in labels:
     encode_label.append(list(map(lambda x: (ner_dict_w2i[x[0]], pos_dict_w2i[x[1]]), i)))
                     
 
-with open('sample_data/ner_dict_w2i.pkl', 'wb') as f:
+'''with open('sample_data/ner_dict_w2i.pkl', 'wb') as f:
     pickle.dump(ner_dict_w2i, f)
 
 with open('sample_data/ner_dict_i2w.pkl', 'wb') as f:
@@ -88,7 +97,10 @@ with open('sample_data/input_sentences.pkl', 'wb') as f:
     pickle.dump(ner_sentences, f)
 
 with open('sample_data/input_labels.pkl', 'wb') as f:
-    pickle.dump(labels, f)
+    pickle.dump(labels, f)'''
+
+with open('sample_data/encode_label_test.pkl', 'wb') as f:
+    pickle.dump(encode_label, f)
 
 sentences = []
 
@@ -104,6 +116,8 @@ for i in ner_sentences:
         en_input.append(2)
     sentences.append(en_input)
 
-with open('sample_data/input_encode.pkl', 'wb') as f:
+'''with open('sample_data/input_encode.pkl', 'wb') as f:
     pickle.dump(sentences, f)
-
+'''
+with open('sample_data/input_encode_test.pkl', 'wb') as f:
+    pickle.dump(sentences, f)

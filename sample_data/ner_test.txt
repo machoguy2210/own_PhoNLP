@@ -84,10 +84,10 @@ phải	O
 trả_giá	O
 cho	O
 cuộc	O
-“	O
+"	O
 thoát	O
 nghèo	O
-”	O
+"	O
 bằng	O
 chính	O
 tính_mạng	O
@@ -230,7 +230,7 @@ nát	O
 gan	O
 .	O
 
-“	O
+"	O
 Một	O
 tuần	O
 nay	O
@@ -259,7 +259,7 @@ còn	O
 sữa	O
 nuôi	O
 con_bé	O
-”	O
+"	O
 -	O
 bà	O
 hàng_xóm	O
@@ -347,7 +347,11 @@ về	O
 Thanh	B-PER
 mất	O
 ngày	O
-19-8-2005	O
+19  O
+-   O
+8   O
+-   O
+2005	O
 ,	O
 khi	O
 đang	O
@@ -376,7 +380,7 @@ Chị	O
 Minh	B-PER
 nghẹn_ngào	O
 :	O
-“	O
+"	O
 Cả	O
 nhà	O
 không	O
@@ -445,7 +449,7 @@ Trời	O
 là	O
 trời	O
 !	O
-”	O
+"	O
 .	O
 
 Anh	O
@@ -488,7 +492,7 @@ giấu	O
 đau_đớn	O
 kể	O
 :	O
-“	O
+"	O
 Hắn	O
 (	O
 anh	O
@@ -517,7 +521,11 @@ hắn	O
 cưới	O
 vợ	O
 (	O
-28-5-2002	O
+28  O
+-   O
+5   O
+-   O
+2002	O
 )	O
 ,	O
 cưới	O
@@ -527,7 +535,9 @@ tháng	O
 thì	O
 đầu	O
 tháng	O
-7-2002	O
+7   O
+-   O
+2002	O
 phải	O
 lên_đường	O
 đi	O
@@ -577,12 +587,14 @@ gần	O
 triệu	O
 đồng	O
 ...	O
-”	O
+"	O
 .	O
 
 Giữa	O
 tháng	O
-1-2005	O
+1   O
+-   O
+2005	O
 anh	O
 Thanh	B-PER
 lên	O
@@ -748,7 +760,7 @@ của	O
 Thanh	B-PER
 .	O
 
-“	O
+"	O
 Vợ	O
 hắn	O
 ngã	O
@@ -777,7 +789,7 @@ tôi	O
 đã	O
 chết	O
 ...	O
-”	O
+"	O
 -	O
 anh	O
 Cường	B-PER
@@ -806,7 +818,7 @@ năm	O
 về	O
 trước	O
 :	O
-“	O
+"	O
 Hồi	O
 đó	O
 tôi	O
@@ -842,7 +854,7 @@ còn	O
 tháng	O
 tuổi	O
 )	O
-”	O
+"	O
 .	O
 
 Chị	O
@@ -898,7 +910,7 @@ tàu	O
 .	O
 
 Nhưng	O
-“	O
+"	O
 nhận	O
 món	O
 tiền	O
@@ -941,7 +953,7 @@ hắn	O
 bấu_víu	O
 vào	O
 ai	O
-”	O
+"	O
 -	O
 anh	O
 Cường	B-PER
@@ -1060,9 +1072,9 @@ nằm	O
 tại	O
 khu	O
 nghĩa_địa	O
-“	O
+"	O
 liên_hiệp_quốc	O
-”	O
+"	O
 này	O
 .	O
 
@@ -1178,39 +1190,7 @@ vùng_biển	O
 Nam_Mỹ	B-LOC
 .	O
 
-Tàu	O
-của	O
-anh	O
-Biên	B-PER
-gặp	O
-nạn	O
-cuối	O
-tháng	O
-4-1999	O
-tại	O
-vùng_biển	O
-Argentina	B-LOC
-,	O
-tàu	O
-đắm	O
-,	O
-năm	O
-người	O
-chết	O
-,	O
-trong	O
-đó	O
-có	O
-duy_nhất	O
-một	O
-người	B-MISC
-VN	I-MISC
-là	O
-anh	O
-Biên	B-PER
-.	O
-
-“	O
+"	O
 Tôi	O
 lúc	O
 đó	O
@@ -1236,7 +1216,7 @@ thể_nào	O
 tin	O
 là	O
 sự_thật	O
-”	O
+"	O
 -	O
 giọng	O
 chị	O
@@ -1254,7 +1234,7 @@ khuôn_mặt	O
 lam_lũ	O
 .	O
 
-“	O
+"	O
 Khi	O
 anh	O
 Biên	B-PER
@@ -1297,7 +1277,7 @@ mấy	O
 tấm	O
 ảnh	O
 này	O
-”	O
+"	O
 .	O
 
 Chị	O
@@ -1316,7 +1296,7 @@ của	O
 anh	O
 .	O
 
-“	O
+"	O
 Mỗi	O
 lần	O
 nhìn	O
@@ -1343,7 +1323,7 @@ các	O
 này	O
 quen	O
 rồi	O
-”	O
+"	O
 .	O
 
 Chỉ	O
@@ -1382,9 +1362,9 @@ lò	O
 thiêu	O
 ...	O
 
-“	O
+"	O
 Hoạ_vô_đơn_chí	O
-”	O
+"	O
 ,	O
 em_gái	O
 chị	O
@@ -1475,7 +1455,9 @@ chết	O
 .	O
 
 Ngày	O
-21-11	O
+21  O
+-   O
+11	O
 ,	O
 anh	O
 Nguyễn_Văn_Mỹ	B-PER
@@ -1694,7 +1676,7 @@ tháng	O
 dưỡng_sức	O
 .	O
 
-“	O
+"	O
 Tôi	O
 còn	O
 may_mắn	O
@@ -1705,7 +1687,7 @@ Trung_Quốc	B-LOC
 mất_mạng	O
 hôm	O
 đó	O
-”	O
+"	O
 .	O
 
 Trở_về	O
@@ -1758,44 +1740,6 @@ người	O
 Hà_Tĩnh	B-LOC
 ,	O
 Nghệ_An	B-LOC
-.	O
-
-Đó	O
-là	O
-một	O
-đêm	O
-tháng	O
-6-2005	O
-,	O
-con	O
-tàu	O
-Koar	O
-101	O
-nhận	O
-được	O
-tín_hiệu	O
-cấp_cứu	O
-từ	O
-một	O
-chiếc	O
-tàu	O
-lạ	O
-trên	O
-vùng_biển	O
-Senegal	B-LOC
-(	O
-châu	B-LOC
-Phi	I-LOC
-)	O
-,	O
-mất	O
-gần	O
-cả	O
-giờ	O
-đồng_hồ	O
-mới	O
-đến	O
-nơi	O
 .	O
 
 Chẳng	O
@@ -1877,7 +1821,7 @@ bờ	O
 tĩnh_dưỡng	O
 .	O
 
-“	O
+"	O
 Chậm	O
 thêm	O
 một_chút	O
@@ -1909,62 +1853,14 @@ còn	O
 chao_đảo	O
 tròng_trành	O
 liên_tục	O
-”	O
+"	O
 -	O
 Sơn	B-PER
 nhớ	O
 lại	O
 .	O
 
-Nếu	O
-Nam_Ninh	B-LOC
-(	O
-tỉnh	B-LOC
-Quảng_Tây	I-LOC
-)	O
-đang	O
-trở_thành	O
-địa_chỉ	O
-mua_sắm	O
-giá	O
-rẻ	O
-cuốn_hút	O
-khách	O
-du_lịch	O
-từ	O
-khắp_nơi	O
-trên	O
-thế_giới	O
-với	O
-...	O
-“	O
-hàng_hiệu	O
-siêu_giả	O
-”	O
-thì	O
-Quảng_Châu	B-LOC
-(	O
-tỉnh	B-LOC
-Quảng_Đông	I-LOC
-)	O
-còn	O
-“	O
-hoành_tráng	O
-”	O
-hơn	O
-vì	O
-được	O
-xem	O
-là	O
-chợ	O
-đồ	O
-nhái	O
-sầm_uất	O
-nhất	O
-Trung_Quốc	B-LOC
-.	O
-
-“	O
+"	O
 Mình	O
 đang	O
 tính	O
@@ -2004,7 +1900,7 @@ sang	O
 xem	O
 hàng	O
 thế_nào	O
-”	O
+"	O
 ,	O
 lời	O
 rủ_rê	O
@@ -2023,9 +1919,9 @@ Quảng_Châu	I-LOC
 Lò	O
 sản_xuất	O
 quần_áo	O
-“	O
+"	O
 liên_hiệp_quốc	O
-”	O
+"	O
 
 Chu_Tiến_Minh	B-PER
 -	O
@@ -2089,7 +1985,7 @@ chợ	O
 quần_áo	O
 Bạc_Má	B-LOC
 ,	O
-“	O
+"	O
 chợ	O
 bán	O
 quần_áo	O
@@ -2105,7 +2001,7 @@ khu_vực	O
 của	O
 thành_phố	B-LOC
 Quảng_Châu	I-LOC
-”	O
+"	O
 .	O
 
 Mới	O
@@ -2191,81 +2087,6 @@ có	O
 hàng	O
 .	O
 
-Dương	B-PER
-cho	O
-hay	O
-“	O
-hàng	O
-siêu_giả	O
-”	O
-vẫn	O
-có_thể	O
-bị	O
-“	O
-đánh	O
-”	O
-vào	O
-trong	O
-các	O
-đại_lý	O
-lớn	O
-và	O
-trộn	O
-lẫn	O
-với	O
-hàng	O
-thật	O
-.	O
-
-Các	O
-đại_lý	O
-bán	O
-quần_áo	O
-hay	O
-mỹ_phẩm	O
-đều	O
-bày	O
-hàng	O
-theo	O
-kiểu	O
-nguyên	O
-cả	O
-một	O
-ngăn	O
-để	O
-tạo	O
-hiệu_ứng	O
-tâm_lý	O
-cho	O
-người	O
-mua	O
-,	O
-chỉ	O
-cần	O
-nhân_viên	O
-bán	O
-hàng	O
-và	O
-quản_lý	O
-thông_đồng	O
-với	O
-nhau	O
-,	O
-trong	O
-chớp_mắt	O
-“	O
-hàng	O
-siêu_giả	O
-”	O
-sẽ	O
-bay	O
-vào	O
-nằm	O
-cạnh	O
-hàng	O
-thật	O
-.	O
-
 Đó	O
 là	O
 chưa	O
@@ -2311,58 +2132,6 @@ mà	O
 lường	O
 !	O
 
-Cầu_thang	O
-cuốn	O
-đưa	O
-lên	O
-tầng	O
-một	O
-và	O
-quang_cảnh	O
-“	O
-hoành_tráng	O
-”	O
-hiện	O
-ra	O
-trước_mắt	O
-:	O
-dọc	O
-hành_lang	O
-đi	O
-chung	O
-,	O
-các	O
-cô	O
-bán	O
-hàng	O
-đứng	O
-tràn	O
-ra	O
-cả	O
-lối	O
-đi	O
-,	O
-âm_thanh	O
-của	O
-tiếng	O
-gọi	O
-mời	O
-hỗn_độn	O
-,	O
-trên	O
-người	O
-các	O
-cô	O
-là	O
-những	O
-bộ_đồ	O
-đắt	O
-nhất	O
-của	O
-cửa_hiệu	O
-mình	O
-.	O
-
 Ai	O
 đi	O
 qua	O
@@ -2390,7 +2159,7 @@ cả	O
 váy	O
 .	O
 
-“	O
+"	O
 Mua	O
 đi	O
 ,	O
@@ -2403,7 +2172,7 @@ nhất	O
 của	O
 Valentino	B-ORG
 đấy	O
-”	O
+"	O
 -	O
 Minh	B-PER
 phiên_dịch	O
@@ -2430,9 +2199,9 @@ dạng	O
 công_sở	O
 )	O
 ,	O
-“	O
+"	O
 người_mẫu	O
-”	O
+"	O
 đứng	O
 bán	O
 là	O
@@ -2466,9 +2235,9 @@ lót	O
 in	O
 mờ	O
 tên	O
-“	O
+"	O
 Valentino	B-ORG
-”	O
+"	O
 ,	O
 các	O
 tem	O
@@ -2544,7 +2313,7 @@ ra	O
 giá	O
 chắc_nịch	O
 :	O
-“	O
+"	O
 Mua	O
 20	O
 cái	O
@@ -2553,7 +2322,7 @@ trở_lên	O
 tệ	O
 /	O
 áo	O
-”	O
+"	O
 (	O
 khoảng	O
 120.000	O
@@ -2563,9 +2332,9 @@ khoảng	O
 mua_lẻ	O
 170	O
 tệ	O
-]	O
+/	O
 áo	O
-”	O
+"	O
 ,	O
 trong	O
 khi	O
@@ -2607,4 +2376,3 @@ không	O
 đủ	O
 sức	O
 .	O
-
