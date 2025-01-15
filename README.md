@@ -14,7 +14,7 @@ python -u train.py
 
 # Result:
 The model is trained for 5 epochs and the result is shown in the image below:
-[image](https://github.com/machoguy2210/own_PhoNLP/assets/122034606/bd37a668-544a-48bc-91b2-fe8ed8484036)
+![image](https://github.com/machoguy2210/own_PhoNLP/assets/122034606/bd37a668-544a-48bc-91b2-fe8ed8484036)
 
 
 
